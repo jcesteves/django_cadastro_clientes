@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+        <a class="navbar-brand text-white ">Cliente</a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link">Adicionar Clientes</a>
+            </li>
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock content %}
+    
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container container-fluid">
+    <div class="text-center">
+    <h3 class="text-info">Pagina de lista de clientes</h>
+    </div>
+    <table class="table table-head">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>CPF</th>
+                <th>Data de Criação</th>
+                <th>Opções</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for clientes in cliente%}
+            <tr>
+                <td>{{clientes.nome}}</td>
+                <td>{{clientes.email}}</td>
+                <td>{{clientes.cpf}}</td>
+                <td>{{clientes.data_criacao}}</td>
+                <td><a href="#" class="btn btn-info">Editar</a></td>
+                <td><a href="#" class="btn btn-danger">Excluir</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>    
+
+
+    
+        
+     
+</div>
+{% endblock %}
